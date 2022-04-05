@@ -3,11 +3,9 @@ pipeline {
     stages{
         stage("try"){
             steps{
-            echo "hello"
+            sh "echo hello"
             }
         }
-    }
-    stages {
         stage('deploy') {
             steps {
               sh "aws configure set region $AWS_REGION" 
@@ -20,3 +18,4 @@ pipeline {
         }
     }
 }
+
