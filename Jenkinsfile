@@ -1,5 +1,12 @@
 pipeline {
     agent any
+    stages{
+        stage("try"){
+            steps{
+            echo "hello"
+            }
+        }
+    }
     stages {
         stage('deploy') {
             steps {
